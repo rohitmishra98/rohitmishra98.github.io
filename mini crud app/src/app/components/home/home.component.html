@@ -1,0 +1,61 @@
+<div class="fluid">
+  <div class="container-fluid">
+    <h2>20 data found</h2>
+    <div class="row">
+
+    
+  <form  class="col-md-3 col-sm-3 form-inline" [ngClass]="{'submitted' : searchForm.submitted}" #searchForm="ngForm" (ngSubmit)="onSubmit(searchForm.value)" >
+    
+    <input 
+    type="search" 
+    id="searchbox" 
+    name="searchText" 
+    [(ngModel)]="searchText" 
+    value="searchText" 
+    
+    placeholder="Filter by computer name..." 
+    class="form-control" 
+    required
+    >
+    &nbsp;
+    <input type="submit" id="searchsubmit" value="Filter by name" class="btn btn-p">
+    
+</form>
+
+<div class="col-md-9" style="text-align: right;">
+    <a class="btn btn-g" [routerLink]="['add']">Add a new computer</a>
+</div>
+</div>
+</div>
+<br>
+<div class="container-fluid">
+    <table class="table table-striped table-rd" >
+        <thead>
+          <tr class="th-head">
+            <td scope="col ">Computer name</td>
+            <td scope="col ">Introduced</td>
+            <td scope="col ">Discontinued</td>
+            <td scope="col ">Company</td>
+          </tr>
+        </thead>
+        <tbody *ngIf="!searchForm.submitted">
+          <tr class="" *ngFor="let c of dataSource ">
+            <td scope="row" class="th-head1"   ><a [routerLink]="[c.id]">{{c.computername}}</a></td>
+            <td>{{c.introduced}}</td>
+            <td>{{c.discontinued}}</td>
+            <td>{{c.company}}</td>
+          </tr>
+          
+        </tbody>
+        <tbody *ngIf="searchForm.submitted">
+          <tr class="" *ngFor="let c of dataSource | filter:searchText">
+            <td scope="row" class="th-head1">{{c.computername}}</td>
+            <td>{{c.introduced}}</td>
+            <td>{{c.discontinued}}</td>
+            <td>{{c.company}}</td>
+          </tr>
+          
+        </tbody>
+      </table>
+</div>
+</div>

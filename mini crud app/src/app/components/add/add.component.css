@@ -1,0 +1,72 @@
+.fix{
+    margin-bottom: 18px;
+    zoom: 1;
+}
+fieldset {
+    margin-bottom: 18px;
+    padding-top: 18px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+    line-height: 1;
+    font-family: inherit;
+}
+.error{
+    border: tomato 1px solid;
+}
+
+label {
+    padding-top: 6px;
+    font-size: 13px;
+    line-height: 18px;
+    float: left;
+    width: 130px;
+    text-align: right;
+    color: #404040;
+}
+
+form .input {
+    margin-left: 150px;
+}
+
+.hint {
+    padding-left: 5px;
+    font-size: 11px;
+    line-height: 18px;
+    color: #bfbfbf;
+}
+
+.heading{
+    margin-bottom: 18px;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+
+select{
+    display: inline-block;
+    width: 174px;
+    height: 28px;
+    padding: 4px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #808080;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.btn-bar{
+    background: #f5f5f5;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    padding: 17px 20px 18px 150px;
+    border-top: 1px solid #ddd;
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
+}

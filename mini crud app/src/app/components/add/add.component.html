@@ -1,0 +1,73 @@
+<div class="fluid">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+          <h2 class="heading ">{{title}} Computer</h2>
+      </div>
+      <div class="col-md-9" style="text-align:right;margin-top: 5px">
+            <button type="submit " class="" value="Delete this computer" class="btn btn-err" (click)="delete(id1)">Delete this computer</button>
+      </div>
+        
+    </div>
+      
+  </div>
+  <div class="container-fluid">
+    <form #form="ngForm" (ngSubmit)="form.form.valid && onSubmit(form)">
+      <fieldset>
+        <div class="fix">
+            <label for="computername">Computer name</label>
+            <div class="input">
+                
+            <input type="text"
+             id="computername" name="computername"
+              value="{{cpt_name}}" 
+              [(ngModel)]="cpt_name" 
+              [ngClass]="{'error' : form.invalid && form.submitted}"
+              required>
+                <span class="hint">Required</span> 
+            </div>
+        </div>
+        <div class="fix">
+            <label for="name">Introduced Date</label>
+            <div class="input">
+                
+            <input type="text" id="introduced" name="introduced" value=" " [(ngModel)]="cpt_idate">
+        
+                <span class="hint">Date ('yyyy-MM-dd')</span> 
+            </div>
+        </div>
+        <div class="fix">
+            <label for="name">Discontinued date</label>
+            <div class="input">
+                
+            <input type="text" id="discontinued" name="discontinued" value="" [(ngModel)]="cpt_ddate">
+        
+                <span class="hint">Date ('yyyy-MM-dd')</span> 
+            </div>
+        </div>
+        <div class="fix">
+            <label for="name">Company</label>
+            <div class="input">
+        
+    
+    
+                <select id="company" name="company" [(ngModel)]="cpt_company">
+                    <option class="blank" value="">-- Choose a company --</option>
+                    <option value="{{cpt_company}}" *ngIf="cpt_company!=null" selected>{{cpt_company}}</option>
+                    <option value="{{company.name}}" *ngFor="let company of companies">{{company.name}}</option>
+                </select>
+            
+        
+                <span class="hint"></span> 
+            </div>
+        </div>
+      </fieldset>
+      <div class="btn-bar">
+          <input type="submit" value="{{title}} computer" class="btn btn-p"> or 
+          <a [routerLink]="['main']" class="btn btn-gry">Cancel</a> 
+      </div>
+    </form>
+
+  </div>
+  
+</div>
