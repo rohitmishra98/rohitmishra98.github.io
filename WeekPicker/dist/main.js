@@ -321,7 +321,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-week-picker></app-week-picker>\n<p class=\"\">\n    Can be used with angular version ^6.0.8\n</p>\n<br>\n<div style=\"text-align:right;\">\n<p> Developer's Profile:<a href=\"https://github.com/rohitmishra98\"  target=\"_blank\" class=\"\"> Rohit Mishra</a></p>\n<span>\n  All Repositories:<br>\n  Simple Crud App <a>https://rohitmishra98.github.io/mini crud app/dist/index.html</a><br>\n  Angular V6 Material Week Picker <a>https://rohitmishra98.github.io/WeekPicker/dist/index.html</a><br>\n</span>\n</div>"
+module.exports = "<app-week-picker></app-week-picker>\n<p class=\"\">\n    Can be used with angular version ^6.0.8\n</p>\n<br>\n<div style=\"text-align:right;\">\n<p> Developer's Profile:<a href=\"https://github.com/rohitmishra98\"  target=\"_blank\" class=\"\"> Rohit Mishra</a></p>\n<div>\n  <p>All Repositories:</p><br>\n  <a href=\"https://rohitmishra98.github.io/mini crud app/dist/index.html\" target=\"_blank\"> Simple Crud App </a><br>\n  <a  href=\"https://rohitmishra98.github.io/WeekPicker/dist/index.html\" target=\"_blank\"> Angular V6 Material Week Picker </a><br>\n  </div>\n</div>"
 
 /***/ }),
 
