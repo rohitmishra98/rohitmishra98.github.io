@@ -321,7 +321,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-week-picker></app-week-picker>"
+module.exports = "<app-week-picker></app-week-picker>\n<p class=\"\">\n    Can be used with angular version ^6.0.8\n</p>\n<br>\n<div style=\"text-align:right;\">\n<p> Developer's Profile:<a href=\"https://github.com/rohitmishra98\"  target=\"_blank\" class=\"\"> Rohit Mishra</a></p>\n<span>\n  All Repositories\n  Simple Crud App <a>https://rohitmishra98.github.io/mini crud app/dist/index.html</a>\n  Angular V6 Material Week Picker <a>https://rohitmishra98.github.io/WeekPicker/dist/index.html</a>\n</span>\n</div>"
 
 /***/ }),
 
@@ -439,7 +439,7 @@ module.exports = ".block-text{\r\n    color: #6876c5;\r\n   font-style: italic;\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"text-center block-text\">\n<div class=\"\">\n  <p class=\"\">\n    This is an Angular Material Week Picker ,<br>\n    where you can select a Start Year and you will Get the Lists of Week \n    from then till current date.\n  </p>\n</div>\n<br>\n<mat-form-field>\n  <input matInput type=\"text\" [(ngModel)]=\"year\" \n   placeholder=\"Change Start Year\">\n</mat-form-field>\n\n<button mat-raised-button (click)=\"changeYear(year)\" >Change Year</button>\n<br>     \n<mat-form-field   *ngIf=\"isLoaded\">\n   \n  <mat-select \n  placeholder=\"select week\"\n  [(ngModel)]=\"selectedWeek\" \n  (selectionChange)=\"weekChange($event)\">\n    \n  <mat-option \n  [value]=\"week\"\n  *ngFor=\"let week of weeks\" \n  \n  >\n    {{week.start}}&nbsp;-&nbsp;{{week.end}}\n  </mat-option>\n     </mat-select>\n    \n  </mat-form-field>\n<br>\n\n<p class=\"\">\nMake this more efficeint Fork this Library and use.\n  </p>\n</div>\n\n<p class=\"\">\n Can be used with angular version ^6.0.8\n  </p>"
+module.exports = "<div class=\"text-center block-text\">\n<div class=\"\">\n  <p class=\"\">\n    This is an Angular Material Week Picker ,<br>\n    where you can select a Start Year and you will Get the Lists of Weeks \n    from then till current date.\n  </p>\n</div>\n<br>\n<mat-form-field>\n  <input matInput type=\"text\" [(ngModel)]=\"year\" \n   placeholder=\"Change Start Year\">\n</mat-form-field>\n\n<button mat-raised-button (click)=\"changeYear(year)\" >Change Year</button>\n<br>     \n<mat-form-field   *ngIf=\"isLoaded\">\n   \n  <mat-select \n  placeholder=\"select week\"\n  [(ngModel)]=\"selectedWeek\" \n  (selectionChange)=\"weekChange($event)\">\n    \n  <mat-option \n  [value]=\"week\"\n  *ngFor=\"let week of weeks\" \n  \n  >\n    {{week.start}}&nbsp;-&nbsp;{{week.end}}\n  </mat-option>\n     </mat-select>\n    \n  </mat-form-field>\n<br>\n\n<p class=\"\">\nMake this more efficeint Fork this Library and use.\n</p>\n</div>\n\n\n"
 
 /***/ }),
 
