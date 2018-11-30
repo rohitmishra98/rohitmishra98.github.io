@@ -1,0 +1,43 @@
+<div class="text-center block-text">
+<div class="">
+  <p class="">
+    This is an Angular Material Week Picker ,<br>
+    where you can select a Start Year and you will Get the Lists of Week 
+    from then till current date.
+  </p>
+</div>
+<br>
+<mat-form-field>
+  <input matInput type="text" [(ngModel)]="year" 
+   placeholder="Change Start Year">
+</mat-form-field>
+
+<button mat-raised-button (click)="changeYear(year)" >Change Year</button>
+<br>     
+<mat-form-field   *ngIf="isLoaded">
+   
+  <mat-select 
+  placeholder="select week"
+  [(ngModel)]="selectedWeek" 
+  (selectionChange)="weekChange($event)">
+    
+  <mat-option 
+  [value]="week"
+  *ngFor="let week of weeks" 
+  
+  >
+    {{week.start}}&nbsp;-&nbsp;{{week.end}}
+  </mat-option>
+     </mat-select>
+    
+  </mat-form-field>
+<br>
+
+<p class="">
+Make this more efficeint Fork this Library and use.
+  </p>
+</div>
+
+<p class="">
+ Can be used with angular version ^6.0.8
+  </p>
