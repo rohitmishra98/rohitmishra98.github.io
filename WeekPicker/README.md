@@ -1,5 +1,8 @@
 # WeekPicker
 
+ This is an Angular Material Week Picker ,
+where you can select a Start Year and you will Get the Lists of Week 
+from then till current date.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Development server
