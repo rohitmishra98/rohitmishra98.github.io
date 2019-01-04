@@ -1,0 +1,112 @@
+<ngx-spinner
+  bdColor = "rgba(51, 51, 51, 0.8)"
+  size = "medium"
+  color = "#fff"
+  type = "pacman"
+></ngx-spinner>
+<!-- ball-spin-clockwise -->
+<div class="container">
+  <form class="container  " #searchForm="ngForm" (ngSubmit)="searchForm.form.valid && onSubmit(searchForm.value)"  >
+    <!-- <p style="color:white">{{searchForm.value | json}}</p>
+      <hr/>
+      <p style="color:white"> {{searchModel | json}}</p> -->
+      <div class="row main-content" >
+         <div class="form-group box">
+            <input type="text"
+            [(ngModel)]="pname"  name="partyname"  
+            placeholder="&#xF002; search case by party name"
+            style="font-family:Arial, FontAwesome; "
+            class="form-control "  #partyname="ngModel"
+            required
+            >
+            <div *ngIf="searchForm.touched && partyname.invalid" class="">
+                <div *ngIf="partyname.errors.required"><span style="color:red !important;">partyname is required*</span></div>
+            </div>
+          
+          
+          </div>
+        <div class="form-group box" >
+          
+
+        <ng-select class="custom"   id="year"
+        [(ngModel)]="year"
+         name="year"
+         [items]="range" 
+         #y="ngModel"
+         (click)="log(searchForm)"
+          required>
+        </ng-select>
+              
+              <span style="color:red !important;" *ngIf="searchForm.touched && y.invalid">year is required*</span>
+              
+        </div>
+  
+        <div class="form-group box" >
+            <ng-select class="custom"   id="location"
+            [(ngModel)]="location"
+            name="location"
+            [items]="locations" 
+            #a="ngModel"
+            required
+            >
+
+            </ng-select>
+            <span style="color:red !important;" *ngIf="searchForm.touched && a.invalid">location is required*</span>
+
+        </div>
+        <div class="form-group box">
+          <button type="submit" [disabled]="searchForm.invalid" class="btn btn-search">search</button>
+        </div>
+  </div>
+     
+  
+    </form>
+</div>
+
+{{casedata | json}}
+<hr>
+{{casedataid | json}}
+<p>
+  <span >{{pname}}</span>
+  <span >{{year}}</span>
+  <span >{{location}}</span>
+</p>
+<div class="table-div"  *ngIf="spin==false">
+<table class="table table-striped text-center">
+  <thead >
+    <tr class="row">
+      <div class="col-md-3" *ngFor="let h of displayedColumns"><p class="table-th">{{h}}</p></div>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of dataSource" class="row ">
+      <div class="col-md-3 "><p class="table-td">{{row.highcourt}}</p></div>
+      <div class="col-md-3"><p class="table-td"><a target="blank" href="#">{{row.casenumber}}</a></p></div>
+      <div class="col-md-3"><p class="table-td">{{row.petitioner}}</p></div>
+      <div class="col-md-3"><p class="table-td">{{row.respondent}}</p></div>
+      
+    </tr>
+    
+  </tbody>
+</table>
+
+<!-- div-table -->
+
+
+
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item disabled">
+        <a class="page-link" href="" tabindex="-1">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="">1</a></li>
+      <li class="page-item"><a class="page-link" href="">2</a></li>
+      <li class="page-item"><a class="page-link" href="">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>

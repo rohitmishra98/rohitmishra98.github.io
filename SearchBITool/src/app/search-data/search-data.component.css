@@ -1,0 +1,92 @@
+.table {
+    
+    background-color: white;
+    /* width: inherit; */
+    
+  }
+
+  .table-th{
+    font-weight: bolder !important;
+        text-transform: capitalize;
+  }
+
+  .table-td{
+    font-weight: lighter !important;
+        text-transform: capitalize;
+        padding: 5px;
+  }
+
+  .table-div{
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+
+    justify-content: center;
+  }
+
+  /* form style */
+form{
+  margin-top:20px;
+}
+
+
+.main-content{
+  justify-content: center
+}
+
+.box{
+  padding: 5px;
+}
+
+.btn-search{
+  background-color: #333;
+  color: white;
+  box-shadow: 1px 1px #f0f0f0c4 ;
+  cursor: pointer;
+  
+}
+
+.btn-search:hover{
+  box-shadow: 3px 3px black;
+}
+
+input:hover{
+  box-shadow: 3px 3px black;
+}
+select:hover{
+  box-shadow: 3px 3px black;
+}
+
+input[type=text]:hover{
+  box-shadow: 3px 3px black;
+  /* width: 300px; */
+  /* -webkit-transition: 0.25s; Safari */
+  /* transition:  0.25s; */
+}
+
+
+
+input[type="checkbox"]{
+  height: 20px;
+  width: 20px;
+  margin-top: 2px;
+}
+
+.ng-select.custom {
+
+   background-color: #fff;
+   border-radius: 0.25rem;
+
+}
+.ng-select.custom .ng-control  {            
+  min-height: 0px;
+  border-radius: 0;
+}
+
+.ng-value-label{
+  color: black !important;
+}
+ng-select:hover{
+  box-shadow: 3px 3px black;
+}
+
+/* form style end */

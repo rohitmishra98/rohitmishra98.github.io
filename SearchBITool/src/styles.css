@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* @import '~@angular/material/prebuilt-themes/deeppurple-amber.css'; */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+
+body{
+    background-color: #0e1e28 !important;
+    font-family: sans-serif, "Helvetica Neue", Arial !important;
+   
+}
+span{
+    color: white ;
+}
+
+a:hover{
+    text-decoration: none !important;
+}
+
+
+.ng-clear-wrapper{
+    display: none;
+}
+.ng-option-label{
+    color: #333 !important;
+}
+
+.ng-value-label{
+    color: #333 !important;
+}
+
+.ng-select.ng-select-single .ng-select-container {
+    height: 38px;
+    min-width: 110px;
+}

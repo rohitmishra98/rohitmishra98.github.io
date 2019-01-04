@@ -1,0 +1,45 @@
+.main-content{
+    justify-content: center
+}
+
+.box{
+    padding: 5px;
+}
+
+.btn-search{
+    background-color: #333;
+    color: white;
+    box-shadow: 1px 1px #f0f0f0c4 ;
+    
+}
+
+.btn-search:hover{
+    box-shadow: 3px 3px black;
+}
+
+input:hover{
+    box-shadow: 3px 3px black;
+}
+select:hover{
+    box-shadow: 3px 3px black;
+}
+
+input[type=text]:hover{
+    box-shadow: 3px 3px black;
+    width: 300px;
+
+}
+
+input[type="checkbox"]{
+    height: 20px;
+    width: 20px;
+    margin-top: 2px;
+}
+
+.custom>ng-dropdown-panel{
+    margin-left: -70px !important;
+}
+
+ng-select:hover{
+    box-shadow: 3px 3px black;
+}

@@ -1,0 +1,79 @@
+
+
+<form class="container col-md-6 " #searchForm="ngForm" (ngSubmit)="searchForm.form.valid && onSubmit(searchForm.value)"  >
+  <!-- <p style="color:white">{{searchForm.value | json}}</p>
+    <hr/>
+    <p style="color:white"> {{searchModel | json}}</p> -->
+     <div class="row main-content" >
+       <div class="form-group box">
+      <input type="text"
+      [(ngModel)]="searchModel.partyname"  name="partyname"  
+        placeholder="&#xF002; search case by party name"
+        style="font-family:Arial, FontAwesome; "
+         class="form-control "  #partyname="ngModel"
+         required>
+         <div *ngIf="searchForm.submitted && partyname.invalid" class="">
+            <div *ngIf="partyname.errors.required"><span style="color:red !important;">partyname is required*</span></div>
+        </div>
+        
+        <input type="checkbox" name="add" [(ngModel)]="searchModel.add" #add="ngModel" >
+
+        <span>&nbsp;add year and location?</span>
+      </div>
+      <div class="form-group box" *ngIf="add.value" >
+        <!-- <select class="form-control  " *ngIf="add.value"  id="year"
+        
+        [(ngModel)]="searchModel.year" name="year">
+              <option value="" disabled [selected]="true">Year?</option>
+             <option *ngFor="let y of years" [value]="y">{{y}}</option>
+        </select> -->
+
+        <!--  ng-select-->
+        <ng-select class="custom" *ngIf="add.value"  id="year"
+        [(ngModel)]="searchModel.year"
+         name="year"
+        
+         [items]="range" 
+         #y="ngModel"
+         (click)="log(searchForm)"
+          required>
+        </ng-select>
+              
+        <div *ngIf="searchForm.value.year == null && searchForm.form.invalid" class="">
+          <div *ngIf="searchForm.value.year == null && searchForm.form.invalid"><span style="color:red !important;">year is required*</span></div>
+      </div>
+      </div>
+      
+
+
+      <div class="form-group box" *ngIf=" add.value">
+    <!-- <select class="form-control " *ngIf=" add.value"  id="location"
+      required
+      [(ngModel)]="searchModel.location"
+       name="location" 
+      >
+      <option  disabled  >location?</option>
+          <option *ngFor="let l of locations" [value]="l">{{l}}</option>
+    </select> -->
+    <ng-select class="custom" *ngIf="add.value"  id="location"
+        [(ngModel)]="searchModel.location"
+         name="location"
+        
+         [items]="locations" 
+         #l="ngModel"
+         (click)="log(l)"
+          required>
+        </ng-select>
+              
+        <div *ngIf="searchForm.value.location == null  && searchForm.form.invalid" class="">
+          <div *ngIf="searchForm.value.location == null  && searchForm.form.invalid"><span style="color:red !important;">location is required*</span></div>
+      </div>
+
+    </div>
+    <div class="form-group box">
+     <button type="submit" class="btn btn-search">search</button>
+     </div>
+    </div>
+   
+
+  </form>
