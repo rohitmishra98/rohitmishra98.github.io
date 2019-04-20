@@ -1,0 +1,43 @@
+ <div style="display:flex"> <b>The list of Employees</b>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <button type="button" style="" class="btn btn-dark" [routerLink]="['add']" >Add Employee</button>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <div class="form-inline"><label for="search">Search Employees:</label>
+    <input  type="text" class="form-control" [(ngModel)]="searchText" id="search"
+    placeholder="(name,Designation,salary)"></div></div>
+ 
+  
+  <table class="table table-striped">
+    <thead>
+      <tr class="text-center">
+        <th>id</th>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Salary</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of data | filter:searchText" class="text-center">
+        <td>{{d.id}}</td>
+        <td>{{d.name}}</td>
+        <td>{{d.designation}}</td>
+        <td>{{d.salary}}</td>
+        <td ><button type="button" class="btn btn-primary" [routerLink]="[d.id]" >Edit</button>&nbsp;&nbsp;<button type="button" class="btn btn-danger" (click)=openconfirmationModal(d.id,dialog) >Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #dialog>
+      <div class="modal-header">
+          <h4 class="modal-title pull-left">Confirm Employee Delete</h4>
+          <button type="button" class="close pull-right" aria-label="Close" (click)="decline()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      <div class="modal-body text-center">
+        <p>Are you sure to delete this employee?</p>
+        <button type="button" class="btn btn-default" (click)="confirm()" >Yes</button>
+        <button type="button" class="btn btn-primary" (click)="decline()" >No</button>
+      </div>
+</ng-template>
